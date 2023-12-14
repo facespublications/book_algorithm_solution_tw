@@ -50,7 +50,7 @@
 #include <string>
 using namespace std;
 
-// 計算以逆波蘭表示法紀錄的值
+// 計算以逆波蘭表示法記錄的值
 double calc(const string &exp) {
     stack<double> st;
     for (auto c: exp) {
