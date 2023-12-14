@@ -118,7 +118,7 @@ F[n] = (α^n - β^n) / (α - β) = 1/√5 (α^n - β^n)
 - 各個位數中是否存在數字 5
 - 各個位數中是否存在數字 3
 
-活用第3.5 節所解說的「整數的二進制表示和位元運算」可以有效的處理這 3 個旗標。例如，可以用如下程式碼實作。
+活用第3.5 節所解說的「整數的二進制表示和位元運算」可以有效地處理這 3 個旗標。例如，可以用如下程式碼實作。
 
 　
 
@@ -163,7 +163,7 @@ int main() {
 
  `bool func(int i, int w, const vector<int> &a)`
 
-中，如下所示準備一個記憶化用陣列，以儲存對引數 i 、 w的答案。
+中，如下所示準備一個記錄化用陣列，以儲存對引數 i 、 w的答案。
 
 -----
 
@@ -180,7 +180,7 @@ int main() {
 #include <vector>
 using namespace std;
 
-// 將func(i, w, a) 的答案記憶化的陣列
+// 將func(i, w, a) 的答案記錄化的陣列
 vector<vector<int>> memo;
 
 // 0：false、1: true
@@ -191,7 +191,7 @@ int func(int i, int w, const vector<int> &a) {
         else return false;
     }
 
-    // 檢查記憶（如果已經計算完畢，就回傳答案）
+    // 檢查記錄（如果已經計算完畢，就回傳答案）
     if (memo[i][w] != -1) return memo[i][w];
 
     // 不選擇 a[i - 1] 時
