@@ -31,7 +31,7 @@ int main() {
 
 # 4.2
 
-在問題 4.1 中所示的程式碼具有指數級時間的計算複雜度。透過4.4 節中解說的記憶化，來進行效率化。可以實作如下。計算複雜度將變成O(N)。
+在問題 4.1 中所示的程式碼具有指數級時間的計算複雜度。透過4.4 節中解說的記錄化，來進行效率化。可以實作如下。計算複雜度將變成O(N)。
 
 　
 
@@ -40,7 +40,7 @@ int main() {
 #include <vector>
 using namespace std;
 
-// 將fibo(N) 的答案記憶化的陣列
+// 將fibo(N) 的答案記錄化的陣列
 vector<long long> memo;
 
 long long func(int N) {
@@ -49,10 +49,10 @@ long long func(int N) {
     else if (N == 1) return 0;
     else if (N == 2) return 1;
 
-    // 檢查記憶（如果已經計算完畢，就回傳答案）
+    // 檢查記錄（如果已經計算完畢，就回傳答案）
     if (memo[N] != -1) return memo[N];
 
-    // 將答案記憶化，同時進行遞迴呼叫
+    // 將答案記錄化，同時進行遞迴呼叫
     return memo[N] = func(N - 1) + func(N - 2) + func(N - 3);
 }
 
@@ -60,7 +60,7 @@ int main() {
     int N;
     cin >> N;
 
-    // 將記憶化用的陣列初始化為-1
+    // 將記錄化用的陣列初始化為-1
     memo.assign(N + 1, -1);
 
     // 呼叫 fibo(N)
